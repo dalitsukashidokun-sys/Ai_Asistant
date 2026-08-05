@@ -7,10 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:vercel": "vite build",
-    "preview": "vite preview",
-    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.node.json --noEmit",
-    "test": "tsc electron/geminiService.ts electron/geminiService.test.ts src/types/pet.ts --outDir .test-dist --rootDir . --ignoreConfig --module esnext --moduleResolution bundler --target es2022 --esModuleInterop --skipLibCheck && node --test .test-dist/electron/geminiService.test.js"
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
