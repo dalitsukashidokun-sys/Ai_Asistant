@@ -7,16 +7,11 @@ const isVercel = process.env.VERCEL === '1';
 export default defineConfig({
   plugins: [
     react(),
-    // Solo se activa Electron si NO estamos en los servidores de Vercel
     ...(!isVercel
       ? [
           electron({
-            main: {
-              entry: 'electron/main.ts',
-            },
-            preload: {
-              input: 'electron/preload.ts',
-            },
+            main: { entry: 'electron/main.ts' },
+            preload: { input: 'electron/preload.ts' },
             renderer: {},
           }),
         ]
